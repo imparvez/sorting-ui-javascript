@@ -10,20 +10,29 @@
 </head>
 
 <body>
-	<!--SELECT LIST-->
-    <select name="" id="selectList" onchange="selectList(this.value)">
-        <option value="high-to-low">High to Low</option>
-        <option value="low-to-high">Low to High</option>
-        <option value="new-release">New Release</option>
-    </select>
+	
 
     <!--Display: GRID/ LIST-->
-    <div class="well well-sm">
-        <strong>Display</strong>
-        <div class="btn-group">
-            <a href="#" id="list" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-th-list">
-            </span>List</a> <a href="#" id="grid" class="btn btn-default btn-sm"><span
-                class="glyphicon glyphicon-th"></span>Grid</a>
+    <div class="option-container">
+        <div class="well well-sm">
+            <!-- <strong>Display</strong> -->
+            <div class="btn-group">
+                <a href="#" id="list" class="btn btn-default btn-sm">
+                    <span class="glyphicon glyphicon-th-list"></span>
+                    List
+                </a> 
+                <a href="#" id="grid" class="btn btn-default btn-sm">
+                    <span class="glyphicon glyphicon-th"></span>
+                    Grid
+                </a>
+            </div>
+
+            <!--SELECT LIST-->
+            <select name="" class="btn pull-right" id="selectList" onchange="selectList(this.value)">
+                <option value="high-to-low">High to Low</option>
+                <option value="low-to-high">Low to High</option>
+                <option value="new-release">New Release</option>
+            </select>
         </div>
     </div>
 
