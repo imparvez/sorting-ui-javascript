@@ -111,6 +111,14 @@ function selectList(value) {
 }
 
 document.getElementById("grid").addEventListener("click", function(){
+    
+    if (this.classList.contains("active")) {
+       this.classList.remove('active');
+    } else {
+        this.classList.add('active');
+        document.getElementById("list").classList.remove("active");
+    }
+
     var el = document.getElementsByClassName('item-card');
     for (var i = 0; i < el.length; i++) {
     	el[i].classList.remove("list-group-item");
@@ -119,6 +127,12 @@ document.getElementById("grid").addEventListener("click", function(){
 });
 
 document.getElementById("list").addEventListener("click", function(){
+    if (this.classList.contains("active")) {
+       this.classList.remove('active');
+    } else {
+        this.classList.add('active');
+        document.getElementById("grid").classList.remove("active");
+    }
     var el = document.getElementsByClassName('item-card');
     for (var i = 0; i < el.length; i++) {
     	el[i].classList.add("list-group-item");
